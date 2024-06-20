@@ -1,0 +1,4 @@
+#!/usr/bin/env php
+<?php namespace Project\Bin;
+
+echo "Welcome to the Brain Games!";
