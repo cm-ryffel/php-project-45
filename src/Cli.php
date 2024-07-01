@@ -1,5 +1,4 @@
 <?php
-
 namespace Src\Cli;
 
 require_once __DIR__ . "/../vendor/autoload.php";
@@ -12,3 +11,4 @@ function greetings()
     $name = prompt('May I have your name?');
     line("Hello, %s!", $name);
 }
+greetings();
