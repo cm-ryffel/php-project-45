@@ -1,33 +1,9 @@
 <?php
 namespace Project\Bin\Even;
 
-require_once __DIR__ . "/../vendor/autoload.php";
-use function cli\line;
-use function cli\prompt;
+require __DIR__ . '/../vendor/autoload.php';
+require __DIR__ . '//../src/Even.php';
 
-function isEven($number) {
-    return $number % 2 === 0;
-};
+use function Src\Even\game;
 
-$correctAnswers = 0;
-$rounds = 3;
-
-
-while ($correctAnswers < $rounds) {
-    $number = rand(1, 100);
-    line("Question: %d", $number);
-    $answer = prompt("Your answer");
-
-    $correctAnswer = isEven($number) ? 'yes' : 'no';
-
-    if($answer === $correctAnswer){
-        line("Correct!");
-        $correctAnswers++;
-    }else{
-        line("'%s' is wrong answer ;(. Correct answer was '%s'.", $answer, $correctAnswer);
-        line("Let's try again, %s!", $name);
-        return;
-    };
-
-    line("Congratulations, %s!", $name); 
-};
+game();
