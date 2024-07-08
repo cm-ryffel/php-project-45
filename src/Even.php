@@ -1,12 +1,13 @@
 <?php
-
 namespace Src\Even;
-
-require_once __DIR__ . "/../vendor/autoload.php";
 
 use function cli\line;
 use function cli\prompt;
 
+
+function isEven($number){
+    return $number % 2 === 0;
+};
 function game(){
     line('Welcome to the Brain Games!');
     $name = prompt('May I have your name?');
@@ -34,9 +35,4 @@ function game(){
     }
 
     line("Congratulations, %s!", $name);
-}
-
-function isEven($number)
-{
-    return $number % 2 === 0;
-}
+};
