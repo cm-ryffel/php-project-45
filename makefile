@@ -9,3 +9,6 @@ lint:
 
 brain-even:
 	php bin/brain-even;
+
+install:
+	composer install

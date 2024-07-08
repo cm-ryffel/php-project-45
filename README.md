@@ -4,3 +4,6 @@
 
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/cm-ryffel/php-project-45/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/cm-ryffel/php-project-45/actions)
+
+### Asciinema
+https://asciinema.org/a/ShyJxeU24K0itRQfkTMVI51Y4
