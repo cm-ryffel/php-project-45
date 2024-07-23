@@ -1,8 +1,8 @@
 <?php
 
-namespace BrainGames\Games\Calculate;
+namespace Src\Games\Calculate;
 
-use function BrainGames\Engine\runGame;
+use function Src\Engine\runGame;
 
 const OPERATIONS = ['+', '-', '*'];
 

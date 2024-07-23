@@ -2,6 +2,6 @@
 <?php 
 require __DIR__ . '/../vendor/autoload.php';
 
-use function BrainGames\Games\Even\start;
+use function Src\Games\Even\start;
 
 start();
