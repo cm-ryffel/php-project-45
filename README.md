@@ -10,3 +10,6 @@ https://asciinema.org/a/ShyJxeU24K0itRQfkTMVI51Y4
 
 ### Asciinema-Calc
 https://asciinema.org/a/XEncBNbC91Y3W5fCE074WlDeS
+
+### Asciinema-Gcd
+https://asciinema.org/a/u5YBog40D36QCASGbx1XAHqk8
