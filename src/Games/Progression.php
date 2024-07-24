@@ -4,7 +4,7 @@ namespace Src\Games\Prograssion;
 
 use function Src\Engine\runGame;
 
-function progression($start, $step, $length)
+function progression(int $start, int $step, int $length)
 {
     $progression = [];
     for ($i = 0; $i < $length; $i++) {

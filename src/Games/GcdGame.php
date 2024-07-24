@@ -4,7 +4,7 @@ namespace Src\Games\Gcd;
 
 use function Src\Engine\runGame;
 
-function gcd($a, $b)
+function gcd(int $a, int $b)
 {
     while ($b != 0) {
         $temp = $b;
