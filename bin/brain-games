@@ -3,5 +3,5 @@
 
 require __DIR__ . '/../vendor/autoload.php';
 
-use function src\Cli\greetings;
+use function Src\Cli\greetings;
 greetings();
