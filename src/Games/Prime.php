@@ -1,5 +1,7 @@
 <?php
+
 namespace Src\Games\Prime;
+
 use function Src\Engine\runGame;
 
 function isPrime($number)
@@ -15,14 +17,16 @@ function isPrime($number)
     return true;
 }
 
-function gameData(){
+function gameData()
+{
     $number = rand(1, 20);
     $question = (string)$number;
     $correctAnswer = isPrime($number) ? 'yes' : 'no';
 
     return [$question, $correctAnswer];
 }
-function start(){
+function start()
+{
     $condition = 'Answer "yes" if given number is prime. Otherwise answer "no".';
     runGame($condition, __NAMESPACE__ . '\\gameData');
 }

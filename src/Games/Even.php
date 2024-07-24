@@ -1,19 +1,23 @@
 <?php
+
 namespace Src\Games\Even;
 
 use function Src\Engine\runGame;
 
-function isEven(int $number): bool{
+function isEven(int $number): bool
+{
     return $number % 2 === 0;
 }
 
-function gameData(): array{
+function gameData(): array
+{
     $question = rand(1, 100);
     $correctAnswer = isEven($question) ? 'yes' : 'no';
     return [(string) $question, $correctAnswer];
 }
 
-function start(){
+function start()
+{
     $condition = 'Answer "yes" if the number is even, otherwise answer "no".';
     runGame($condition, __NAMESPACE__ . '\\gameData');
 }
