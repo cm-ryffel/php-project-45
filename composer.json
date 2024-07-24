@@ -10,6 +10,7 @@
             "src/Games/Even.php",
             "src/Games/GcdGame.php",
             "src/Games/Progression.php",
+            "src/Games/Prime.php",
             "src/Cli.php",
             "src/Engine.php"
         ]
@@ -25,6 +26,7 @@
         "./bin/brain-even",
         "./bin/brain-calc",
         "./bin/brain-gcd",
-        "./bin/brain-progression"
+        "./bin/brain-progression",
+        "./bin/brain-prime"
     ]
 }
