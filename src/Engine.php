@@ -1,6 +1,6 @@
 <?php
 
-namespace Src\Engine;
+namespace App\Engine;
 
 use function cli\line;
 use function cli\prompt;
@@ -19,7 +19,7 @@ function runGame(string $condition, callable $gameData)
         line("Question: %s", $question);
         $answer = prompt('Your answer');
 
-        if ($answer == $correctAnswer) {
+        if ($answer === $correctAnswer) {
             line('Correct!');
         } else {
             line("'%s' is wrong answer ;(. Correct answer was '%s'.", $answer, $correctAnswer);

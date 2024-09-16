@@ -1,8 +1,8 @@
 <?php
 
-namespace Src\Games\Calculate;
+namespace App\Games\Calculate;
 
-use function Src\Engine\runGame;
+use function App\Engine\runGame;
 
 const OPERATIONS = ['+', '-', '*'];
 
@@ -20,7 +20,7 @@ function calculate(int $a, int $b, string $operation): int
     }
 }
 
-function gameData(): array
+function getGameData(): array
 {
     $a = rand(1, 10);
     $b = rand(1, 10);
@@ -33,5 +33,5 @@ function gameData(): array
 function start()
 {
     $condition = 'What is the result of the expression?';
-    runGame($condition, __NAMESPACE__ . '\\gameData');
+    runGame($condition, __NAMESPACE__ . '\\getGameData');
 }

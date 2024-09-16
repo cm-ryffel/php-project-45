@@ -1,12 +1,12 @@
 <?php
 
-namespace Src\Cli;
+namespace App\Cli;
 
-require_once __DIR__ . "/../vendor/autoload.php";
+// require_once __DIR__ . "/../vendor/autoload.php";
 use function cli\line;
 use function cli\prompt;
 
-function greetings()
+function greet()
 {
     line('Welcome to the Brain Games!');
     $name = prompt('May I have your name?');

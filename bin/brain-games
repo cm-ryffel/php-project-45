@@ -1,7 +1,7 @@
 #!/usr/bin/env php
-<?php namespace Project\Bin;
+<?php
 
 require __DIR__ . '/../vendor/autoload.php';
 
-use function Src\Cli\greetings;
-greetings();
+use function App\Cli\greet;
+greet();

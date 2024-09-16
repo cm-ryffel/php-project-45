@@ -2,5 +2,5 @@
 <?php
 
 require __DIR__ . '/../vendor/autoload.php';
-use function Src\Games\Gcd\start;
+use function Src\Games\GcdGame\start;
 start();

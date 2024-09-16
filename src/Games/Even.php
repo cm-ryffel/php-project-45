@@ -1,15 +1,15 @@
 <?php
 
-namespace Src\Games\Even;
+namespace App\Games\Even;
 
-use function Src\Engine\runGame;
+use function App\Engine\runGame;
 
 function isEven(int $number): bool
 {
     return $number % 2 === 0;
 }
 
-function gameData(): array
+function getGameData(): array
 {
     $question = rand(1, 100);
     $correctAnswer = isEven($question) ? 'yes' : 'no';
@@ -19,5 +19,5 @@ function gameData(): array
 function start()
 {
     $condition = 'Answer "yes" if the number is even, otherwise answer "no".';
-    runGame($condition, __NAMESPACE__ . '\\gameData');
+    runGame($condition, __NAMESPACE__ . '\\getGameData');
 }

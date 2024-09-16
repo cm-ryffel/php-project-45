@@ -1,8 +1,8 @@
 <?php
 
-namespace Src\Games\Gcd;
+namespace Src\Games\GcdGame;
 
-use function Src\Engine\runGame;
+use function App\Engine\runGame;
 
 function gcd(int $a, int $b)
 {
@@ -13,7 +13,7 @@ function gcd(int $a, int $b)
     }
     return $a;
 }
-function gameData()
+function getGameData()
 {
     $a = rand(1, 50);
     $b = rand(1, 50);
@@ -26,5 +26,5 @@ function gameData()
 function start()
 {
     $condition = 'Find the greatest common divisor of given numbers.';
-    runGame($condition, __NAMESPACE__ . '\\gameData');
+    runGame($condition, __NAMESPACE__ . '\\getGameData');
 }

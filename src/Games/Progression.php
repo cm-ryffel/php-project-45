@@ -1,8 +1,8 @@
 <?php
 
-namespace Src\Games\Prograssion;
+namespace App\Games\Prograssion;
 
-use function Src\Engine\runGame;
+use function App\Engine\runGame;
 
 function progression(int $start, int $step, int $length)
 {
@@ -13,15 +13,15 @@ function progression(int $start, int $step, int $length)
     return $progression;
 }
 
-function gameData()
+function getGameData()
 {
     $start = rand(1, 20);
     $step = rand(1, 5);
     $length = rand(5, 10);
     $progression = progression($start, $step, $length);
-    $Index = rand(0, $length - 1);
-    $correctAnswer = (string)$progression[$Index];
-    $progression[$Index] = '..';
+    $index = rand(0, $length - 1);
+    $correctAnswer = (string)$progression[$index];
+    $progression[$index] = '..';
     $question = implode(' ', $progression);
 
     return [$question, $correctAnswer];
@@ -30,5 +30,5 @@ function gameData()
 function start()
 {
     $condition = 'What number is missing in the progression?';
-    runGame($condition, __NAMESPACE__ . '\\gameData');
+    runGame($condition, __NAMESPACE__ . '\\getGameData');
 }
