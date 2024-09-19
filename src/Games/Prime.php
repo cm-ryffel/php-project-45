@@ -4,7 +4,7 @@ namespace App\Games\Prime;
 
 use function App\Engine\runGame;
 
-function isPrime(int $number)
+function isPrime(int $number) : bool
 {
     if ($number < 2) {
         return false;
@@ -17,16 +17,17 @@ function isPrime(int $number)
     return true;
 }
 
-function getGameData()
+
+function start()
+{
+    $getGameData = function () : array
 {
     $number = rand(1, 20);
     $question = (string)$number;
     $correctAnswer = isPrime($number) ? 'yes' : 'no';
 
     return [$question, $correctAnswer];
-}
-function start()
-{
+};
     $condition = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-    runGame($condition, __NAMESPACE__ . '\\getGameData');
+    runGame($condition, $getGameData);
 }

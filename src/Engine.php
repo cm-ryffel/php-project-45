@@ -3,6 +3,7 @@
 namespace App\Engine;
 
 use function cli\line;
+
 use function cli\prompt;
 
 const ROUNDS_COUNT = 3;
