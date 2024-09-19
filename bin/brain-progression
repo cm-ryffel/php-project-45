@@ -2,6 +2,6 @@
 <?php
 require __DIR__ . "/../vendor/autoload.php";
 
-use function App\Games\Prograssion\start;
+use function App\Games\Progression\start;
 
 start();
