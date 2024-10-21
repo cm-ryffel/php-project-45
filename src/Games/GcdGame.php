@@ -32,4 +32,3 @@ function gcd(int $firstValue, int $secondValue): int
     }
     return $firstValue;
 }
-
