@@ -8,17 +8,9 @@ const MIN_RANDOM_INT = 1;
 const MAX_RANDOM_INT = 10;
 const MIN_RANDOM_LENGTH = 5;
 const MAX_RANDOM_LENGTH = 10;
+const GAME_CONDITION = 'What number is missing in the progression?';
 
-function progression(int $start, int $step, int $length): array
-{
-    $progression = [];
-    for ($i = 0; $i < $length; $i++) {
-        $progression[] = $start + $i * $step;
-    }
-    return $progression;
-}
-
-function start()
+function start(): void
 {
     $getGameData = function (): array {
         $start = rand(MIN_RANDOM_INT, MAX_RANDOM_INT);
@@ -33,7 +25,14 @@ function start()
         return [$question, $correctAnswer];
     };
 
-    $condition = 'What number is missing in the progression?';
+    runGame(GAME_CONDITION, $getGameData);
+}
 
-    runGame($condition, $getGameData);
+function progression(int $start, int $step, int $length): array
+{
+    $progression = [];
+    for ($i = 0; $i < $length; $i++) {
+        $progression[] = $start + $i * $step;
+    }
+    return $progression;
 }

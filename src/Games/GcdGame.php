@@ -4,28 +4,32 @@ namespace App\Games\GcdGame;
 
 use function App\Engine\runGame;
 
-function gcd(int $a, int $b): int
-{
-    while ($b != 0) {
-        $temp = $b;
-        $b = $a % $b;
-        $a = $temp;
-    }
-    return $a;
-}
+const MIN_RANDOM_NUMBER = 1;
+const MAX_RANDOM_NUMBER = 50;
+const GAME_CONDITION = 'Find the greatest common divisor of given numbers.';
 
-function start()
+function start(): void
 {
     $getGameData = function (): array {
-        $a = rand(1, 50);
-        $b = rand(1, 50);
-        $question = "$a $b";
-        $correctAnswer = (string)gcd($a, $b);
+        $firstValue = rand(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER);
+        $secondValue = rand(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER);
+        $question = "$firstValue $secondValue";
+        $correctAnswer = (string)gcd($firstValue, $secondValue);
 
         return [$question, $correctAnswer];
     };
 
-    $condition = 'Find the greatest common divisor of given numbers.';
 
-    runGame($condition, $getGameData);
+    runGame(GAME_CONDITION, $getGameData);
 }
+
+function gcd(int $firstValue, int $secondValue): int
+{
+    while ($secondValue != 0) {
+        $temp = $secondValue;
+        $secondValue = $firstValue % $secondValue;
+        $firstValue = $temp;
+    }
+    return $firstValue;
+}
+

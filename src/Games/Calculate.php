@@ -7,22 +7,9 @@ use function App\Engine\runGame;
 const OPERATIONS = ['+', '-', '*'];
 const MIN_RANDOM_INT = 1;
 const MAX_RANDOM_INT = 10;
+const GAME_CONDITION = 'What is the result of the expression?';
 
-function calculate(int $a, int $b, string $operation): int
-{
-    switch ($operation) {
-        case '+':
-            return $a + $b;
-        case '-':
-            return $a - $b;
-        case '*':
-            return $a * $b;
-        default:
-            throw new \Exception("Unknown operation: $operation");
-    }
-}
-
-function start()
+function start(): void
 {
     $getGameData = function (): array {
         $start = rand(MIN_RANDOM_INT, MAX_RANDOM_INT);
@@ -34,7 +21,19 @@ function start()
         return [$question, $correctAnswer];
     };
 
-    $condition = 'What is the result of the expression?';
+    runGame(GAME_CONDITION, $getGameData);
+}
 
-    runGame($condition, $getGameData);
+function calculate(int $firstValue, int $secondValue, string $operation): int
+{
+    switch ($operation) {
+        case '+':
+            return $firstValue + $secondValue;
+        case '-':
+            return $firstValue - $secondValue;
+        case '*':
+            return $firstValue * $secondValue;
+        default:
+            throw new \Exception("Unknown operation: $operation");
+    }
 }
